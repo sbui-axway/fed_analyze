@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+{{#policies}}
+  <h2>{{fval.name}}</h2>
+  {{#filters}}
+  <h3>{{type}}</h3>
+    {{#params}}
+      <tr>
+        <td>
+        {{this.key}}
+        </td>
+        <td>
+        {{this.value}}
+        </td>
+      </tr>
+    {{/params}}
+  {{/filters}}
+{{/policies}}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+{{#each policies}}
+    <h2>Policy : {{fval.name}}</h2>
+    <img src="{{svg}}">
+    <table>
+        {{#each fval}}
+        <tr>
+            <td>{{@key}}</td>
+            <td>{{this}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    {{#each filters}}
+    <h3>filter :{{params.name}}</h3>
+    <table>           
+            {{#each params}}
+            <tr>
+                <td>{{@key}}</td>
+                <td>{{this}}</td>
+            </tr>           
+            {{/each}}
+    </table>
+    {{/each}}
+
+{{/each}}
+</body>
+</html>
